@@ -1,5 +1,6 @@
 import MusicTable from "./components/musicTable/musicTable";
 import NavBar from "./components/navBar/NavBar";
+import SearchBar from "./components/searchBar/SearchBar";
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
   return (
     <div>
       <NavBar/>
+      <SearchBar/>
       <MusicTable/>
     </div>
   );
