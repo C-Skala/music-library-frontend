@@ -1,19 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
 const MusicTable = (props) => {
     
-    const[songs, setSongs] = useState([]);
 
-    useEffect(() => {
-        getAllSongs(); 
-    }, []);
-
-    async function getAllSongs(){
-        const response = await axios.get('http://127.0.0.1:8000/music/')
-        setSongs(response.data)
-        console.log(response.data)
-    }
     
     return ( 
         <table>
@@ -28,17 +17,22 @@ const MusicTable = (props) => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>insert Title here</td>
-                    <td>insert Artist here</td>
-                    <td>insert Album here</td>
-                    <td>insert Genre here</td>
-                    <td>insert Release Date here</td>
-                    <td>insert Likes here</td>
-                    <button>Like</button>
-                    <button>Delete</button>
-                    <button>Edit</button>
+                {props.parentSongs.map((songs)=> {
+                    return(
+                        <tr key = {songs}>
+                        <td>{songs.title}</td>
+                        <td>{songs.artist}</td>
+                        <td>{songs.album}</td>
+                        <td>{songs.genre}</td>
+                        <td>{songs.release_date}</td>
+                        <td>{songs.likes}</td>
+                        <button>Like</button>
+                        <button>Delete</button>
+                        <button>Edit</button>
                 </tr>
+                    )
+                })}
+                
                 
             </tbody>
         </table>
