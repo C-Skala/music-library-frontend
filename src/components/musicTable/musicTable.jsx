@@ -10,7 +10,7 @@ const MusicTable = (props) => {
     }, []);
 
     async function getAllSongs(){
-        const response = await axios.get('http://127.0.0.1:8000/music')
+        const response = await axios.get('http://127.0.0.1:8000/music/')
         setSongs(response.data)
         console.log(response.data)
     }
@@ -28,15 +28,18 @@ const MusicTable = (props) => {
                 </tr>
             </thead>
             <tbody>
-                <td>insert Title here</td>
-                <td>insert Artist here</td>
-                <td>insert Album here</td>
-                <td>insert Genre here</td>
-                <td>insert Release Date here</td>
-                <td>insert Likes here</td>
-                <button>Like</button>
-                <button>Delete</button>
-                <button>Edit</button>
+                <tr>
+                    <td>insert Title here</td>
+                    <td>insert Artist here</td>
+                    <td>insert Album here</td>
+                    <td>insert Genre here</td>
+                    <td>insert Release Date here</td>
+                    <td>insert Likes here</td>
+                    <button>Like</button>
+                    <button>Delete</button>
+                    <button>Edit</button>
+                </tr>
+                
             </tbody>
         </table>
      );
