@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const MusicTable = (props) => {
     
 
@@ -19,16 +20,15 @@ const MusicTable = (props) => {
             <tbody>
                 {props.parentSongs.map((songs)=> {
                     return(
-                        <tr key = {songs}>
+                        <tr key = {songs.id}>
                         <td>{songs.title}</td>
                         <td>{songs.artist}</td>
                         <td>{songs.album}</td>
                         <td>{songs.genre}</td>
                         <td>{songs.release_date}</td>
                         <td>{songs.likes}</td>
-                        <button>Like</button>
-                        <button>Delete</button>
-                        <button>Edit</button>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
                 </tr>
                     )
                 })}

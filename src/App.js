@@ -3,9 +3,9 @@ import NavBar from "./components/navBar/NavBar";
 import SearchBar from "./components/searchBar/SearchBar";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import PostNewSong from "./components/postNewSong/postNewSong";
 
 function App() {
-  
   const[songs, setSongs] = useState([]);
 
   useEffect(() => {
@@ -19,11 +19,13 @@ function App() {
   }
   
   
+  
   return (
     <div>
       <NavBar/>
       <SearchBar/>
-      <MusicTable parentSongs = {songs}/>
+      <MusicTable parentSongs ={songs}/>
+      <PostNewSong getAllSongs = {getAllSongs}/>
     </div>
   );
 }
