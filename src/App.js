@@ -22,9 +22,9 @@ function App() {
   
   return (
     <div>
-      <NavBar/>
-      <SearchBar/>
-      <MusicTable parentSongs ={songs}/>
+      <NavBar />
+      <SearchBar songs = {songs} setSongs = {setSongs}/>
+      <MusicTable parentSongs ={songs} getAllSongs = {getAllSongs}/>
       <PostNewSong getAllSongs = {getAllSongs}/>
     </div>
   );
