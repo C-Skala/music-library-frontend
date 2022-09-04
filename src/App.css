@@ -1,0 +1,28 @@
+.postNewSongArea{
+    background-color:ghostwhite;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 1em;
+    padding: 1em;
+}
+
+.whole{
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+}
+
+.imageSetup{
+    order: -1px;
+}
+
+.table{
+    background-color: wheat;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 1em;
+    padding: 1em;
+}
+

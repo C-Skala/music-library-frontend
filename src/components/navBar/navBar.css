@@ -1,0 +1,22 @@
+.head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: coral;
+    text-align: center;
+    padding: 1rem;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+}
+
+.mainWord{
+    font-size: large;
+    justify-self: center;
+}
+
+.searchBar{
+    display: flex;
+    justify-self: flex-end;
+}

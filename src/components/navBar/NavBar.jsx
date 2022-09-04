@@ -1,6 +1,18 @@
+import React from 'react';
+import './navBar.css';
+import SearchBar from '../searchBar/SearchBar';
+
 const NavBar = (props) => {
     return ( 
-        <h1>Music World!</h1>
+        <div className = 'head'>
+            <div className = 'mainWord'>
+                Music World!
+            </div>
+            <div className = 'searchBar'>
+                <SearchBar/>
+            </div>
+            </div>
+       
      );
 }
  

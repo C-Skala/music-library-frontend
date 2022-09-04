@@ -1,9 +1,11 @@
 import MusicTable from "./components/musicTable/musicTable";
 import NavBar from "./components/navBar/NavBar";
-import SearchBar from "./components/searchBar/SearchBar";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PostNewSong from "./components/postNewSong/postNewSong";
+import './App.css';
+import './components/navBar/navBar.css'
+import danceGig from './components/Images/starlord-dance.gif';
 
 function App() {
   const[songs, setSongs] = useState([]);
@@ -21,11 +23,23 @@ function App() {
   
   
   return (
-    <div>
-      <NavBar />
-      <SearchBar songs = {songs} setSongs = {setSongs}/>
-      <MusicTable parentSongs ={songs} getAllSongs = {getAllSongs}/>
-      <PostNewSong getAllSongs = {getAllSongs}/>
+    <div className="whole">
+      <div>
+        <div>
+          <div>
+           <NavBar /> 
+          </div>
+          <div className = 'table'>
+            <MusicTable parentSongs ={songs} getAllSongs = {getAllSongs}/>
+          </div>
+          <div className = 'postNewSongArea'>
+            <PostNewSong getAllSongs = {getAllSongs}/>
+          </div>
+          <div className="imageSetup">
+          <img src={danceGig} altText = 'starlord dancing' />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

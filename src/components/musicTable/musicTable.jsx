@@ -1,6 +1,6 @@
 import React from 'react';
 import DeleteButton from '../DeleteSong/DeleteSong';
-
+import './musicTable.css';
 
 const MusicTable = (props) => {
     
@@ -19,6 +19,7 @@ const MusicTable = (props) => {
                 </tr>
             </thead>
             <tbody>
+                
                 {props.parentSongs.map((songs)=> {
                     return(
                         <tr key = {songs.id}>
@@ -28,7 +29,6 @@ const MusicTable = (props) => {
                         <td>{songs.genre}</td>
                         <td>{songs.release_date}</td>
                         <td>{songs.likes}</td>
-                        <td><button>Edit</button></td>
                         <td><DeleteButton id = {songs.id} getAllSongs = {props.getAllSongs}/></td>
                         
                 </tr>
