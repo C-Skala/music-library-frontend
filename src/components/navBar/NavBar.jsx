@@ -9,7 +9,7 @@ const NavBar = (props) => {
                 Music World!
             </div>
             <div className = 'searchBar'>
-                <SearchBar/>
+                <SearchBar songs ={props.songs} setSongs ={props.setSongs}/>
             </div>
             </div>
        

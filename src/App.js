@@ -27,7 +27,7 @@ function App() {
       <div>
         <div>
           <div>
-           <NavBar /> 
+           <NavBar songs = {songs} setSongs = {setSongs}/> 
           </div>
           <div className = 'table'>
             <MusicTable parentSongs ={songs} getAllSongs = {getAllSongs}/>
